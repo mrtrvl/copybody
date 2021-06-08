@@ -1,0 +1,27 @@
+{
+  "name": "Copy everything",
+  "description": "Copy everything from webpage",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "copyBody": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      },
+      "description": "Copy body",
+      "global": true
+    }
+  },
+  "action": {
+    "default_popup": "copyBodyElement.html"
+  },
+  "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ]
+}
